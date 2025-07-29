@@ -7,7 +7,7 @@ const cafes = [
     telefono: "0800-122-0129",
     descripcion: "Cadena internacional con café, pastelería y ambiente moderno.",
     rating: 3.7,
-    imagen: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/7e/6b/27/starbucks-coffee-av-callao.jpg?w=1200&h=-1&s=1"
+    imagen: "https://picsum.photos/seed/starbucks/400/300"
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const cafes = [
     telefono: "011 4393-9456",
     descripcion: "Café tradicional porteño con historia y ambiente clásico.",
     rating: 3.8,
-    imagen: "https://media-cdn.tripadvisor.com/media/photo-s/03/58/67/10/restaurante-cafeteria.jpg"
+    imagen: "https://picsum.photos/seed/rondo/400/300"
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const cafes = [
     telefono: "011 7528-1952",
     descripcion: "Café moderno con opciones de brunch y decoración minimalista.",
     rating: 3.7,
-    imagen: "https://identitydesigned.com/wp-content/uploads/2015/11/tostado-cafe-club-identity-01.jpg"
+    imagen: "https://picsum.photos/seed/tostado/400/300"
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ const cafes = [
     telefono: "011 6457-7188",
     descripcion: "Café de especialidad con granos seleccionados y ambiente íntimo.",
     rating: 4.5,
-    imagen: "https://media-cdn.tripadvisor.com/media/photo-s/07/3a/3e/8c/negro-cueva-de-cafe.jpg"
+    imagen: "https://picsum.photos/seed/negro/400/300"
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ const cafes = [
     telefono: "0800-666-1371",
     descripcion: "Clásico argentino con café, alfajores y atención destacada.",
     rating: 4.1,
-    imagen: "https://media-cdn.tripadvisor.com/media/photo-s/1b/6f/9b/88/havanna-cafe-av-santa.jpg"
+    imagen: "https://picsum.photos/seed/havanna/400/300"
   },
   {
     id: 6,
@@ -57,7 +57,7 @@ const cafes = [
     telefono: "011 15-3226-2137",
     descripcion: "Café gourmet con blends exclusivos y ambiente tranquilo.",
     rating: 4.0,
-    imagen: "https://media-cdn.tripadvisor.com/media/photo-s/1a/9f/9b/8b/enitma-cafe.jpg"
+    imagen: "https://picsum.photos/seed/enitma/400/300"
   },
   {
     id: 7,
@@ -67,7 +67,7 @@ const cafes = [
     telefono: "011 4826-4272",
     descripcion: "Café gourmet con pastelería artesanal y atención personalizada.",
     rating: null,
-    imagen: "https://scontent.cdninstagram.com/v/t51.2885-15/12345678_1234567890_n.jpg"
+    imagen: "https://picsum.photos/seed/tentazzioni/400/300"
   },
   {
     id: 8,
@@ -77,7 +77,7 @@ const cafes = [
     telefono: "011 15-6358-7679",
     descripcion: "Café de especialidad con granos guatemaltecos y opciones saludables.",
     rating: 4.4,
-    imagen: "https://scontent.cdninstagram.com/v/t51.2885-15/12345678_1234567890_n.jpg"
+    imagen: "https://picsum.photos/seed/rondo/400/300"
   }
 ];
 
