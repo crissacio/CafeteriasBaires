@@ -5,8 +5,10 @@ const CafeDetail = ({ cafe }) => {
   if (!cafe) return null;
 
   return (
-    <div className="cafe-detail">
-      <h2>{cafe.nombre}</h2>
+    <article className="cafe-detail">
+      <header>
+        <h2>{cafe.nombre}</h2>
+      </header>
 
       {cafe.imagen && (
         <img
@@ -16,12 +18,14 @@ const CafeDetail = ({ cafe }) => {
         />
       )}
 
-      <p><strong>Dirección:</strong> {cafe.direccion}</p>
-      <p><strong>Barrio:</strong> {cafe.barrio}</p>
-      <p><strong>Teléfono:</strong> {cafe.telefono}</p>
-      <p><strong>Rating:</strong> ⭐ {cafe.rating ?? "Sin calificación"}</p>
-      <p><strong>Descripción:</strong> {cafe.descripcion}</p>
-    </div>
+      <section>
+        <p><strong>📍 Dirección:</strong> {cafe.direccion}</p>
+        <p><strong>🏘️ Barrio:</strong> {cafe.barrio}</p>
+        <p><strong>📞 Teléfono:</strong> {cafe.telefono}</p>
+        <p><strong>⭐ Rating:</strong> {cafe.rating ?? "Sin calificación"}</p>
+        <p><strong>📝 Descripción:</strong> {cafe.descripcion}</p>
+      </section>
+    </article>
   );
 };
 

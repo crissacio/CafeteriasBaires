@@ -7,10 +7,12 @@ const Home = () => {
   const [cafeSeleccionado, setCafeSeleccionado] = useState(null);
 
   return (
-    <div className="app-container">
-      <div className="cafe-list">
-        <h1>TuCoffee ☕</h1>
-        <p>Explorá las mejores cafeterías de Capital Federal</p>
+    <main className="app-container">
+      <section className="cafe-list">
+        <header>
+          <h1>TuCoffee ☕</h1>
+          <p>Explorá las mejores cafeterías de Capital Federal</p>
+        </header>
 
         {cafes.map((cafe) => (
           <CafeCard
@@ -19,15 +21,16 @@ const Home = () => {
             onSelect={(c) => setCafeSeleccionado(c)}
           />
         ))}
-      </div>
+      </section>
 
       {cafeSeleccionado && (
-        <div className="fixed-detail">
+        <aside className="fixed-detail fade-in">
           <CafeDetail cafe={cafeSeleccionado} />
-        </div>
+        </aside>
       )}
-    </div>
+    </main>
   );
 };
 
 export default Home;
+
