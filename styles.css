@@ -1,0 +1,96 @@
+/* -------- TuCoffee: Estilo Pastel & Moderno -------- */
+
+/* Fuente personalizada */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+* {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FFF7F4;
+  color: #333;
+  padding: 2rem;
+}
+
+/* Encabezado */
+h1 {
+  font-size: 2.5rem;
+  color: #FF7C9C;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+/* Tarjeta de café */
+.cafe-card {
+  background-color: #FFFFFF;
+  border: 2px solid #FFDCE2;
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 0.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.05);
+  cursor: pointer;
+}
+
+.cafe-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+.cafe-card h3 {
+  color: #E45D7C;
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.cafe-card p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Detalle del café */
+.cafe-detail {
+  background-color: #F3E8FF;
+  border: 2px solid #D8BFFF;
+  padding: 1.5rem;
+  border-radius: 16px;
+  margin-top: 2rem;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.06);
+}
+
+.cafe-detail h2 {
+  font-size: 1.8rem;
+  color: #A855F7;
+  margin-bottom: 0.5rem;
+}
+
+.cafe-detail p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+/* Botón base */
+.btn {
+  background-color: #FF7C9C;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 999px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #E86789;
+}
