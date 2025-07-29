@@ -1,83 +1,53 @@
 const cafes = [
   {
     id: 1,
-    nombre: "Starbucks",
-    direccion: "Avenida Callao 702",
-    barrio: "Balvanera",
-    telefono: "0800-122-0129",
-    descripcion: "Cadena internacional con café, pastelería y ambiente moderno.",
-    rating: 3.7,
-    imagen: "https://picsum.photos/seed/starbucks/400/300"
+    nombre: "Café Palermo",
+    imagen: "https://images.unsplash.com/photo-1509042239860-f550ce710b93",
+    direccion: "Av. Santa Fe 1234",
+    barrio: "Palermo",
+    telefono: "11-2345-6789",
+    rating: 4.5,
+    descripcion: "Ambiente cálido con café de especialidad y pastelería artesanal."
   },
   {
     id: 2,
-    nombre: "Café Valerio",
-    direccion: "Lavalle 799, Esquina Esmeralda",
-    barrio: "Microcentro",
-    telefono: "011 4393-9456",
-    descripcion: "Café tradicional porteño con historia y ambiente clásico.",
-    rating: 3.8,
-    imagen: "https://picsum.photos/seed/rondo/400/300"
+    nombre: "La Taza",
+    imagen: "https://images.unsplash.com/photo-1511920170033-f8396924c348",
+    direccion: "Calle Corrientes 567",
+    barrio: "San Nicolás",
+    telefono: "11-9876-5432",
+    rating: 4.2,
+    descripcion: "Espacio moderno con opciones veganas y café orgánico."
   },
   {
     id: 3,
-    nombre: "Tostado Café Club",
-    direccion: "Av. Córdoba 2135",
-    barrio: "Recoleta",
-    telefono: "011 7528-1952",
-    descripcion: "Café moderno con opciones de brunch y decoración minimalista.",
-    rating: 3.7,
-    imagen: "https://picsum.photos/seed/tostado/400/300"
+    nombre: "Café del Parque",
+    imagen: "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9",
+    direccion: "Av. Rivadavia 789",
+    barrio: "Caballito",
+    telefono: "11-4567-8901",
+    rating: 4.7,
+    descripcion: "Ideal para leer o trabajar, con vista al parque y café de origen."
   },
   {
     id: 4,
-    nombre: "Negro Cueva de Café",
-    direccion: "Suipacha 637",
-    barrio: "Centro",
-    telefono: "011 6457-7188",
-    descripcion: "Café de especialidad con granos seleccionados y ambiente íntimo.",
-    rating: 4.5,
-    imagen: "https://picsum.photos/seed/negro/400/300"
+    nombre: "Espresso Central",
+    imagen: "https://images.unsplash.com/photo-1510626176961-4bfb7f1f1c8e",
+    direccion: "Calle Florida 321",
+    barrio: "Microcentro",
+    telefono: "11-1122-3344",
+    rating: 4.3,
+    descripcion: "Café intenso y rápido, perfecto para una pausa en el centro."
   },
   {
     id: 5,
-    nombre: "Havanna Café",
-    direccion: "Av. Santa Fe 3148",
-    barrio: "Palermo",
-    telefono: "0800-666-1371",
-    descripcion: "Clásico argentino con café, alfajores y atención destacada.",
-    rating: 4.1,
-    imagen: "https://picsum.photos/seed/havanna/400/300"
-  },
-  {
-    id: 6,
-    nombre: "Enitma Café Reserva Gourmet",
-    direccion: "Av. Belgrano 502",
+    nombre: "Matza Coffee",
+    imagen: "https://images.unsplash.com/photo-1525382455947-f319bc05f9b9",
+    direccion: "Av. Belgrano 999",
     barrio: "Monserrat",
-    telefono: "011 15-3226-2137",
-    descripcion: "Café gourmet con blends exclusivos y ambiente tranquilo.",
-    rating: 4.0,
-    imagen: "https://picsum.photos/seed/enitma/400/300"
-  },
-  {
-    id: 7,
-    nombre: "TENTAZZIONI Café",
-    direccion: "Juncal 2002",
-    barrio: "Recoleta",
-    telefono: "011 4826-4272",
-    descripcion: "Café gourmet con pastelería artesanal y atención personalizada.",
-    rating: null,
-    imagen: "https://picsum.photos/seed/tentazzioni/400/300"
-  },
-  {
-    id: 8,
-    nombre: "Rondó Café",
-    direccion: "Uruguay 1048",
-    barrio: "Recoleta",
-    telefono: "011 15-6358-7679",
-    descripcion: "Café de especialidad con granos guatemaltecos y opciones saludables.",
-    rating: 4.4,
-    imagen: "https://picsum.photos/seed/rondo/400/300"
+    telefono: "11-7788-9900",
+    rating: 4.8,
+    descripcion: "Nuestra marca insignia, con identidad visual cuidada y café de autor."
   }
 ];
 

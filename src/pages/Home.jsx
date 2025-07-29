@@ -7,13 +7,9 @@ const Home = () => {
   const [cafeSeleccionado, setCafeSeleccionado] = useState(null);
 
   return (
-    <main className="app-container">
+    <main className={`app-container ${cafeSeleccionado ? "has-detail" : "full-list"}`}>
+        
       <section className="cafe-list">
-        <header>
-          <h1>TuCoffee ☕</h1>
-          <p>Explorá las mejores cafeterías de Capital Federal</p>
-        </header>
-
         {cafes.map((cafe) => (
           <CafeCard
             key={cafe.id}
@@ -33,4 +29,3 @@ const Home = () => {
 };
 
 export default Home;
-

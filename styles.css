@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 :root {
-  --clr-bg: #F5F8FC;
-  --clr-primary: #4C4EFF;
-  --clr-accent: #FF6F91;
+  --clr-bg: #F3F7FA;
+  --clr-primary: #3F66FF;
+  --clr-accent: #FF5C98;
+  --clr-highlight: #5FFFCF;
   --clr-card: #FFFFFF;
-  --clr-border: #E2E8F0;
-  --clr-text-main: #1E293B;
-  --clr-text-secondary: #64748B;
-  --shadow-soft: 0 4px 14px rgba(0, 0, 0, 0.04);
-  --radius: 16px;
+  --clr-border: #DDE3EC;
+  --clr-text-main: #1A1D2A;
+  --clr-text-secondary: #6B7280;
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.06);
+  --radius: 20px;
+  --blur-bg: 14px;
 }
 
 * {
@@ -20,16 +22,18 @@
 }
 
 body {
-  background-color: var(--clr-bg);
+  background: radial-gradient(circle at top left, #F3F7FA 0%, #E9F0FC 100%);
   color: var(--clr-text-main);
   line-height: 1.6;
+  transition: background 0.5s ease, color 0.5s ease;
 }
 
-/* 🧭 Header fijo */
+/* 🧭 Header */
 .header {
   width: 100%;
   background-color: var(--clr-card);
   border-bottom: 1px solid var(--clr-border);
+  backdrop-filter: blur(var(--blur-bg));
   padding: 1.5rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -38,6 +42,7 @@ body {
   top: 0;
   z-index: 100;
   box-shadow: var(--shadow-soft);
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .header h1 {
@@ -51,41 +56,57 @@ body {
   color: var(--clr-text-secondary);
 }
 
-/* 🧩 Layout principal */
+/* 💡 Layout principal */
 .app-container {
   display: grid;
-  grid-template-columns: 2fr 1fr;
   gap: 2rem;
   max-width: 1400px;
   margin: auto;
   padding: 2rem;
+  transition: grid-template-columns 0.4s ease;
 }
 
-.cafe-list {
+.app-container.full-list {
+  grid-template-columns: 1fr;
+}
+
+.full-list .cafe-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+  transition: grid-template-columns 0.3s ease;
+}
+
+.app-container.has-detail {
+  grid-template-columns: 2fr 1fr;
+}
+
+.has-detail .cafe-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  transition: grid-template-columns 0.3s ease;
 }
 
 /* 📦 Tarjetas */
 .cafe-card {
-  background-color: var(--clr-card);
+  background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
   border: 1px solid var(--clr-border);
   border-radius: var(--radius);
   padding: 1.5rem;
   box-shadow: var(--shadow-soft);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
   animation: fadeUp 0.6s ease-out both;
 }
 
 .cafe-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.08);
 }
 
 .cafe-card h3 {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 600;
   color: var(--clr-primary);
   margin-bottom: 0.4rem;
@@ -100,48 +121,42 @@ body {
 .fixed-detail {
   position: sticky;
   top: 6.5rem;
-  align-self: start;
   background-color: var(--clr-card);
+  backdrop-filter: blur(var(--blur-bg));
   border: 1px solid var(--clr-border);
   border-radius: var(--radius);
   padding: 2rem;
   box-shadow: var(--shadow-soft);
+  max-height: calc(100vh - 8rem);
   overflow-y: auto;
-  max-height: calc(100vh - 7.5rem);
-  animation: fadeIn 0.7s ease-out both;
-}
-
-.cafe-detail {
+  animation: slideIn 0.4s ease-out both;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
 .cafe-detail h2 {
   font-size: 1.8rem;
   color: var(--clr-accent);
-  margin-bottom: 0.75rem;
 }
 
 .cafe-detail p {
   font-size: 1rem;
   color: var(--clr-text-secondary);
-  margin-bottom: 0.5rem;
 }
 
 .cafe-img,
 .cafe-detail-img {
   width: 100%;
   height: auto;
-  border-radius: var(--radius);
   object-fit: cover;
+  border-radius: var(--radius);
   max-height: 240px;
-  margin-bottom: 1rem;
 }
 
-/* 🟣 Botón */
+/* 🔘 Botón general */
 .btn {
-  background-color: var(--clr-accent);
+  background: linear-gradient(135deg, var(--clr-accent), #FF80B5);
   color: white;
   padding: 0.6rem 1.4rem;
   border: none;
@@ -149,13 +164,125 @@ body {
   font-weight: 600;
   font-size: 0.95rem;
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.2s ease;
-  margin-top: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 16px rgba(255, 110, 199, 0.3);
 }
 
 .btn:hover {
-  background-color: #e95b7d;
+  background: linear-gradient(135deg, #e95bcb, #ff75e1);
   transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 110, 199, 0.4);
+}
+
+/* 🌙 Botón modo oscuro */
+.toggle-theme {
+  margin-left: auto;
+  font-size: 0.9rem;
+  padding: 0.4rem 1rem;
+  background: linear-gradient(135deg, var(--clr-primary), #657EFF);
+  color: white;
+  box-shadow: 0 4px 14px rgba(94, 93, 255, 0.3);
+}
+
+.toggle-theme:hover {
+  background: linear-gradient(135deg, #4c5bff, #798eff);
+  box-shadow: 0 6px 18px rgba(94, 93, 255, 0.4);
+}
+
+/* 🎬 Animación de reorganización */
+.cafe-list {
+  transition: all 0.4s ease;
+}
+
+.cafe-list > * {
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+/* ❌ Botón cerrar */
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--clr-text-main);
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: var(--clr-accent);
+}
+
+/* 📤 Animación al cerrar detalle */
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+}
+
+.fixed-detail.exit {
+  animation: slideOut 0.3s ease-out forwards;
+}
+
+
+/* 🌌 Modo oscuro */
+body.dark-mode {
+  --clr-bg: #0F1017;
+  --clr-card: rgba(26, 27, 36, 0.92);
+  --clr-border: #2A2C3A;
+  --clr-text-main: #E1E4ED;
+  --clr-text-secondary: #959BB0;
+  --clr-primary: #A7B6FF;
+  --clr-accent: #FF7FA6;
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.65);
+  background: linear-gradient(120deg, #0F1017 0%, #1A1C27 100%);
+  color: var(--clr-text-main);
+}
+
+body.dark-mode .header,
+body.dark-mode .cafe-card,
+body.dark-mode .fixed-detail {
+  background: linear-gradient(135deg, #1B1C23 0%, #232532 100%);
+  border: 1px solid var(--clr-border);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(10px);
+}
+
+body.dark-mode .cafe-card h3 {
+  color: var(--clr-primary);
+}
+
+body.dark-mode .cafe-card p {
+  color: var(--clr-text-secondary);
+}
+
+body.dark-mode .btn {
+  background: linear-gradient(135deg, var(--clr-accent), #FFAAC6);
+  box-shadow: 0 4px 16px rgba(255, 127, 166, 0.4);
+  color: white;
+}
+
+body.dark-mode .btn:hover {
+  background: linear-gradient(135deg, #E06690, #FFA0BE);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 127, 166, 0.5);
+}
+
+body.dark-mode .toggle-theme {
+  background: linear-gradient(135deg, var(--clr-primary), #C5D2FF);
+  color: #0F1017;
+  box-shadow: 0 6px 18px rgba(167, 182, 255, 0.4);
+}
+
+body.dark-mode .toggle-theme:hover {
+  background: linear-gradient(135deg, #9CB0FF, #D8E0FF);
 }
 
 /* 🎞️ Animaciones */
@@ -170,18 +297,27 @@ body {
   }
 }
 
-@keyframes fadeIn {
+@keyframes slideIn {
   from {
     opacity: 0;
+    transform: translateX(40px);
   }
   to {
     opacity: 1;
+    transform: translateX(0);
   }
 }
 
 /* 📱 Responsive */
 @media (max-width: 768px) {
-  .app-container {
+  .app-container,
+  .app-container.full-list,
+  .app-container.has-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .full-list .cafe-list,
+  .has-detail .cafe-list {
     grid-template-columns: 1fr;
   }
 
@@ -189,10 +325,11 @@ body {
     position: relative;
     max-height: none;
     margin-top: 2rem;
+    animation: fadeIn 0.5s ease-out both;
   }
 
   .cafe-list {
-    grid-template-columns: 1fr;
+    gap: 1.2rem;
   }
 
   .header {
