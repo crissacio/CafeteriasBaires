@@ -7,11 +7,11 @@ const Home = () => {
   const [cafeSeleccionado, setCafeSeleccionado] = useState(null);
 
   return (
-    <div style={{ padding: "2rem", fontFamily: "sans-serif" }}>
-      <h1>TuCoffee ☕</h1>
-      <p>Explorá las mejores cafeterías de Capital Federal</p>
+    <div className="app-container">
+      <div className="cafe-list">
+        <h1>TuCoffee ☕</h1>
+        <p>Explorá las mejores cafeterías de Capital Federal</p>
 
-      <div style={{ display: "flex", flexWrap: "wrap" }}>
         {cafes.map((cafe) => (
           <CafeCard
             key={cafe.id}
@@ -22,7 +22,7 @@ const Home = () => {
       </div>
 
       {cafeSeleccionado && (
-        <div style={{ marginTop: "2rem" }}>
+        <div className="fixed-detail">
           <CafeDetail cafe={cafeSeleccionado} />
         </div>
       )}
